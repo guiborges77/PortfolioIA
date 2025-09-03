@@ -48,7 +48,7 @@ const Header = () => {
             className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
             <Monitor className="w-8 h-8 text-cyan-400" />
-            <span>
+            <span >
               {/* Guilherme Borges */}
             </span>
           </button>
