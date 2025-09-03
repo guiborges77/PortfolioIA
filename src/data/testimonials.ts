@@ -14,7 +14,7 @@ export const testimonials: Testimonial[] = [
     id: 'marina-costa',
     name: "Marina Costa",
     role: "Analista Senior",
-    company: "Vivo Telefonica",
+    company: "VIVO Telefonica",
     content: "Como estagiário, Guilherme superou todas as expectativas. Sua dedicação ao aprender análise de dados e sua atenção aos detalhes em relatórios gerenciais foram excepcionais. Um talento promissor na área de tecnologia.",
     rating: 5,
     image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150",
