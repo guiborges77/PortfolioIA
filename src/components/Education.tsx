@@ -242,9 +242,24 @@ const Education = () => {
                                     {course.type}
                                   </span>
                                 </div>
-                                <button className="text-cyan-400 hover:text-cyan-300 transition-colors group-hover:scale-110 transform duration-300">
+                                <a
+                                  href={
+                                    course.link !== "#"
+                                      ? course.link
+                                      : undefined
+                                  } 
+                                  target={
+                                    course.link !== "#" ? "_blank" : undefined
+                                  } 
+                                  rel="noopener noreferrer"
+                                  className={`text-cyan-400 hover:text-cyan-300 transition-colors group-hover:scale-110 transform duration-300 ${
+                                    course.link === "#"
+                                      ? "cursor-not-allowed opacity-50"
+                                      : ""
+                                  }`}
+                                >
                                   <ExternalLink className="w-5 h-5" />
-                                </button>
+                                </a>
                               </div>
 
                               <div className="flex flex-wrap gap-2">

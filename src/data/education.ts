@@ -55,7 +55,7 @@ export const courses: Course[] = [
     link: "#",
   },
   {
-    id: "python-primeira-app",
+    id: "python-gpt",
     title: "Python e GPT: Criando um Chatbot com IA",
     institution: "Alura",
     type: "Curso Online",
