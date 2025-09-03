@@ -2,8 +2,8 @@
 export const config = {
   // Links para download do CV
   cvLinks: {
-    pt: '/cv-guilherme-borges-pt.pdf',
-    en: '/cv-guilherme-borges-en.pdf'
+    pt: 'https://drive.google.com/drive/folders/1748GJ6cQZpNVVZnSB7HZ6LPhDmklJyM7?usp=sharing',
+    en: 'https://drive.google.com/drive/folders/1748GJ6cQZpNVVZnSB7HZ6LPhDmklJyM7?usp=sharing'
   },
   
   // Configurações do formulário de contato

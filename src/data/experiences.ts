@@ -58,7 +58,7 @@ export const experiences: Experience[] = [
     logo: "https://pbs.twimg.com/profile_images/1022496448049545219/vK7N4IwR_400x400.jpg",
     position: "Estagiário em Análise de Dados",
     period: "Dezembro 2021 – Julho 2023",
-    location: "Remoto",
+    location: "Presencial",
     status: "completed",
     description: "Análise de dados hospitalares, criação de dashboards e relatórios gerenciais para tomada de decisões estratégicas na área da saúde.",
     activities: [

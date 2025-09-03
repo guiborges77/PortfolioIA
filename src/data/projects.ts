@@ -51,8 +51,8 @@ export const projects: Project[] = [
     highlights: ['Juros Compostos', 'Gráficos Interativos', 'Planejamento Financeiro'],
     icon: 'PiggyBank',
     color: "from-blue-400 to-purple-600",
-    github: "https://github.com/guiborges77/plano-aposentadoria",
-    demo: "https://planodeaposentadoria.netlify.app",
+    github: "https://github.com/guiborges77/planejador-financeiro-ia",
+    demo: "https://planejamento-financeiro-ia.vercel.app",
     image: "https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Fintech",
     type: "Full Stack App"
