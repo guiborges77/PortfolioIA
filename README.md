@@ -1,5 +1,7 @@
 # 🌐 Portfólio - Guilherme Borges
 
+# 🌐Acesse em: [borgesguilherme.com](https://www.borgesguilherme.com)  
+
 Bem-vindo(a) ao meu portfólio! 🚀  
 Sou **Desenvolvedor Full Stack** com experiência em **front-end e back-end**, criando soluções completas que vão de interfaces modernas até integrações com bancos de dados e automações de processos.  
 Atualmente, curso **Ciência da Computação (previsão: dez/2026)** e sou formado em **Análise e Desenvolvimento de Sistemas (dez/2024)**.
@@ -73,10 +75,10 @@ Atualmente, curso **Ciência da Computação (previsão: dez/2026)** e sou forma
 
 ## 📬 Contato
 
-- 📧 E-mail: [seuemail@email.com](mailto:guilherme.borgesjob@gmail.com)  
-- 💼 LinkedIn: [linkedin.com/in/seulink](https://linkedin.com/in/guiborges77)  
-- 🐙 GitHub: [github.com/seuusuario](https://github.com/guiborges77)  
-- 🌐 Portfólio Online: [seusite.com](https://www.borgesguilherme.com)  
+- 📧 E-mail: [guilherme.borgesjob@gmail.com](mailto:guilherme.borgesjob@gmail.com)  
+- 💼 LinkedIn: [linkedin.com/in/guiborges7](https://linkedin.com/in/guiborges77)  
+- 🐙 GitHub: [github.com/guiborges77](https://github.com/guiborges77)  
+- 🌐 Portfólio Online: [borgesguilherme.com](https://www.borgesguilherme.com)  
 
 ✉️ Estou aberto a **projetos, colaborações e oportunidades**. Vamos conversar! 🚀
 
