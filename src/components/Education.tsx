@@ -99,7 +99,7 @@ const Education = () => {
                     <BookOpen className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-sm">
+                    <h3 className="font-bold text-white text-sm sm:text-2xl">
                       {t("education.tabs.education")}
                     </h3>
                     <p className="text-xs opacity-70 mt-1">
