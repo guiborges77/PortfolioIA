@@ -7,6 +7,7 @@ export interface Testimonial {
   rating: number;
   image: string;
   color: string;
+  link?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -18,7 +19,7 @@ export const testimonials: Testimonial[] = [
     content: "Como estagiário, Guilherme superou todas as expectativas. Sua dedicação ao aprender análise de dados e sua atenção aos detalhes em relatórios gerenciais foram excepcionais. Um talento promissor na área de tecnologia.",
     rating: 5,
     image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150",
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
   },
   {
     id: 'gabriel-borlinck',
@@ -28,7 +29,8 @@ export const testimonials: Testimonial[] = [
     content: "Trabalhar com o Guilherme foi uma experiência muito enriquecedora. Ele sempre mostrou um grande interesse em aprender coisas novas, seja por meio de cursos ou trocando ideias com a equipe. Sua dedicação e atenção aos detalhes fizeram toda a diferença no dia a dia. Foi um prazer ter trabalhado com ele, e espero que possamos ter a oportunidade de trabalhar juntos novamente no futuro!",
     rating: 5,
     image: "https://media.licdn.com/dms/image/v2/D4D03AQG3iF-6giHVxQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712941559415?e=1759968000&v=beta&t=LUQFod9mkMz26-DaMtlpS5UUjleYJxh0J4o5eqWu0Qk",
-    color: "from-purple-500 to-pink-500"
+    color: "from-purple-500 to-pink-500",
+    link: "https://www.linkedin.com/in/guiborges7/details/recommendations",
   },
   {
     id: 'juan-alves',
@@ -38,7 +40,8 @@ export const testimonials: Testimonial[] = [
     content: "Tive o privilégio de trabalhar com o Guilherme, infelizmente por um curto período de apenas 10 meses. Nesse tempo, foi possível observar sua proatividade, além de seu foco, curiosidade e apoio. Mesmo não sendo do mesmo setor, Guilherme estava sempre pronto para me ajudar em diversos tópicos, assim como ajudou vários outros profissionais da empresa. Ele é um cara que você vai querer na sua empresa.",
     rating: 5,
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHKjrxsbrfiXQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1689900639950?e=1759968000&v=beta&t=OOW8GkUDmGgtBAK8AFhKcY35wa5K3cKrG_Ih4YY-6Ac",
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
+    link: "https://www.linkedin.com/in/guiborges7/details/recommendations",
   },
 
   // {

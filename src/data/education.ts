@@ -22,19 +22,19 @@ export interface Course {
 export const education: EducationItem[] = [
   {
     id: "ciencia-computacao",
-    degree: "Bacharelado em Ciência da Computação",
-    institution: "Centro Universitário das Américas",
-    period: "2023 – Dezembro 2026",
+    degree: "Bacharelado em Engenharia da Computação",
+    institution: "FIAP - Faculdade de Informática e Administração Paulista",
+    period: "2024 – 2026",
     status: "Em Andamento",
     description:
-      "Aprofundamento em algoritmos, estruturas de dados, engenharia de software e inteligência artificial.",
+      "Aprofundamento em algoritmos, estruturas de dados, engenharia de software e inteligência artificial. Aproveitamento de disciplinas do curso de Análise e Desenvolvimento de Sistemas, restando apenas 3 semestres para a conclusão da graduação.",
     color: "from-blue-600 to-purple-600",
     progress: 60,
   },
   {
     id: "ads",
-    degree: "Análise e Desenvolvimento de Sistemas",
-    institution: "Centro Universitário das Américas",
+    degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    institution: "FAM - Centro Universitário das Américas",
     period: "2022 – 2024",
     status: "Concluído",
     description:
