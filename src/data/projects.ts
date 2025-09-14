@@ -78,26 +78,26 @@ export const projects: Project[] = [
     image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Fintech",
     type: "Web Application"
-  },
-  {
-    id: 'portfolio',
-    title: 'Portfólio Pessoal',
-    description: 'Site pessoal desenvolvido com React e TypeScript, apresentando projetos, experiências e habilidades de forma interativa e moderna.',
-    features: [
-      'Design responsivo e moderno',
-      'Sistema de tradução PT/EN',
-      'Animações suaves e micro-interações',
-      'Seções organizadas em tabs',
-      'Otimizado para performance'
-    ],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Vercel"],
-    highlights: ['React + TypeScript', 'Design Responsivo', 'Multilíngue'],
-    icon: 'User',
-    color: "from-purple-400 to-pink-600",
-    github: "#",
-    demo: "#",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Web",
-    type: "Portfolio Site"
   }
+  // {
+  //   id: 'portfolio',
+  //   title: 'Portfólio Pessoal',
+  //   description: 'Site pessoal desenvolvido com React e TypeScript, apresentando projetos, experiências e habilidades de forma interativa e moderna.',
+  //   features: [
+  //     'Design responsivo e moderno',
+  //     'Sistema de tradução PT/EN',
+  //     'Animações suaves e micro-interações',
+  //     'Seções organizadas em tabs',
+  //     'Otimizado para performance'
+  //   ],
+  //   technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Vercel"],
+  //   highlights: ['React + TypeScript', 'Design Responsivo', 'Multilíngue'],
+  //   icon: 'User',
+  //   color: "from-purple-400 to-pink-600",
+  //   github: "#",
+  //   demo: "#",
+  //   image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+  //   category: "Web",
+  //   type: "Portfolio Site"
+  // }
 ];

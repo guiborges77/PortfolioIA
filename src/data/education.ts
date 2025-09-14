@@ -22,7 +22,7 @@ export interface Course {
 export const education: EducationItem[] = [
   {
     id: "ciencia-computacao",
-    degree: "Bacharelado em Engenharia da Computação",
+    degree: "Bacharelado em Ciência da Computação",
     institution: "FIAP - Faculdade de Informática e Administração Paulista",
     period: "2024 – 2026",
     status: "Em Andamento",

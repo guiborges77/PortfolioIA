@@ -5,11 +5,11 @@ import { projects } from '../data/projects';
 import { iconMap } from '../utils/iconMapper';
 
 const Projects = () => {
-  const { t, language } = useLanguage(); // ✅ corrigido
+  const { t, language } = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
 
   const currentProject = projects[activeTab];
-  const IconComponent = iconMap[currentProject.icon as keyof typeof iconMap];
+  const CurrentProjectIcon = iconMap[currentProject.icon as keyof typeof iconMap];
 
   return (
     <section id="projects" className="py-20 relative">
@@ -24,54 +24,55 @@ const Projects = () => {
             {t('projects.title')}
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-pink-400 to-purple-500 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {t('projects.subtitle')}
-          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('projects.subtitle')}</p>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Tabs Navigation */}
           <div className="lg:col-span-1">
             <div className="space-y-4">
-              {projects.map((project, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${
-                    activeTab === index
-                      ? `bg-gradient-to-r ${project.color} border-transparent text-white shadow-2xl`
-                      : 'bg-gray-900/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/50 hover:bg-gray-800/50'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center mb-2">
-                        <div className={`p-1.5 rounded-lg mr-2 ${
-                          activeTab === index 
-                            ? 'bg-white/20' 
-                            : 'bg-gray-800/50 group-hover:bg-cyan-500/20'
-                        }`}>
-                          <IconComponent className="w-5 h-5" />
+              {projects.map((project, index) => {
+                const ProjectIcon = iconMap[project.icon as keyof typeof iconMap];
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`w-full text-left p-4 rounded-xl border transition-all duration-300 group ${
+                      activeTab === index
+                        ? `bg-gradient-to-r ${project.color} border-transparent text-white shadow-2xl`
+                        : 'bg-gray-900/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/50 hover:bg-gray-800/50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          <div
+                            className={`p-1.5 rounded-lg mr-2 ${
+                              activeTab === index
+                                ? 'bg-white/20'
+                                : 'bg-gray-800/50 group-hover:bg-cyan-500/20'
+                            }`}
+                          >
+                            <ProjectIcon className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-xs leading-tight">{project.title}</h3>
+                            <p className="text-xs opacity-70">{project.type}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="font-bold text-xs leading-tight">{project.title}</h3>
-                          <p className="text-xs opacity-70">{project.type}</p>
+                        <div className="flex items-center">
+                          <span className="px-2 py-0.5 bg-black/20 text-xs rounded-full">{project.category}</span>
                         </div>
                       </div>
-                      <div className="flex items-center">
-                        <span className="px-2 py-0.5 bg-black/20 text-xs rounded-full">
-                          {project.category}
-                        </span>
-                      </div>
+                      <ChevronRight
+                        className={`w-3 h-3 transition-transform ${
+                          activeTab === index ? 'rotate-90' : 'group-hover:translate-x-1'
+                        }`}
+                      />
                     </div>
-                    <ChevronRight 
-                      className={`w-3 h-3 transition-transform ${
-                        activeTab === index ? 'rotate-90' : 'group-hover:translate-x-1'
-                      }`} 
-                    />
-                  </div>
-                </button>
-              ))}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -80,7 +81,7 @@ const Projects = () => {
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden">
               {/* Gradient Border Effect */}
               <div className={`h-1 bg-gradient-to-r ${currentProject.color}`}></div>
-              
+
               <div className="p-8">
                 {/* Project Header */}
                 <div className="mb-8">
@@ -94,12 +95,12 @@ const Projects = () => {
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                      
+
                       {/* Project Icon */}
                       <div className={`absolute top-4 left-4 p-3 bg-gradient-to-r ${currentProject.color} rounded-xl shadow-2xl`}>
-                        <IconComponent className="w-8 h-8" />
+                        <CurrentProjectIcon className="w-8 h-8" />
                       </div>
-                      
+
                       {/* Category Badge */}
                       <div className="absolute top-4 right-4 px-3 py-1 bg-black/50 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/20">
                         {currentProject.category}
@@ -190,13 +191,15 @@ const Projects = () => {
                     <div className="space-y-3">
                       {currentProject.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start group">
-                          <div className={`w-2 h-2 bg-gradient-to-r ${currentProject.color} rounded-full mt-2 mr-3 flex-shrink-0 group-hover:scale-125 transition-transform`}></div>
+                          <div
+                            className={`w-2 h-2 bg-gradient-to-r ${currentProject.color} rounded-full mt-2 mr-3 flex-shrink-0 group-hover:scale-125 transition-transform`}
+                          ></div>
                           <span className="text-gray-300 text-sm group-hover:text-white transition-colors">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Technologies */}
                   <div>
                     <h4 className="font-semibold text-white mb-4 flex items-center">
