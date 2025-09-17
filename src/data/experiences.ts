@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // src/data/experiences.ts
 
+=======
+>>>>>>> main
 export interface Position {
   role: string;
   period: string;
