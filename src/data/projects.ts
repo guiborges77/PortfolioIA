@@ -48,7 +48,7 @@ export const projects: Project[] = [
       'Cálculos precisos de juros compostos',
       'Interface intuitiva e responsiva'
     ],
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["React + TypeScript", "Vite", "Tailwind CSS", "Lucide React", "Recharts", ],
     highlights: ['Juros Compostos', 'Gráficos Interativos', 'Planejamento Financeiro'],
     icon: 'PiggyBank',
     color: "from-blue-400 to-purple-600",
