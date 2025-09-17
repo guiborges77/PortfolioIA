@@ -23,7 +23,7 @@ export const education: EducationItem[] = [
   {
     id: "ciencia-computacao",
     degree: "Bacharelado em Ciência da Computação",
-    institution: "FIAP - Faculdade de Informática e Administração Paulista",
+    institution: "FAM - Centro Universitário das Américas",
     period: "2024 – 2026",
     status: "Em Andamento",
     description:
