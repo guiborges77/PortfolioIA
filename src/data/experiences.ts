@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     color: "from-purple-500 to-purple-900",
     positions: [
       {
-        role: "Desenvolvedor Full Stack - Estágio",
+        role: "Estagiário em Desenvolvimento de Sistemas",
         period: "Agosto 2024 – Junho 2025",
         location: "Híbrido, São Paulo, SP",
         status: "completed",
@@ -84,7 +84,7 @@ export const experiences: Experience[] = [
     color: "from-orange-500 to-red-500",
     positions: [
       {
-        role: "Desenvolvedor Web - Estágio",
+        role: "Estagiário em Desenvolvimento Full Stack",
         period: "Janeiro 2024 – Julho 2024",
         location: "Presencial, São Paulo, SP",
         status: "completed",
@@ -115,7 +115,7 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        role: "Analista de Suporte Técnico",
+        role: "Suporte Técnico",
         period: "Setembro 2023 – Dezembro 2023",
         location: "Presencial, São Paulo, SP",
         status: "completed",
