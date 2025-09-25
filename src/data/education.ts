@@ -46,6 +46,15 @@ export const education: EducationItem[] = [
 
 export const courses: Course[] = [
   {
+    id: "bigdata-fiap",
+    title: "Big Data & Analytics",
+    institution: "FIAP",
+    type: "Certificado",
+    skills: ["Python", "R", "SQL", "Power BI", "Big Data", "Data Analytics"],
+    color: "from-red-500 to-red-900",
+    link: "https://on.fiap.com.br/local/nanocourses/gerar_certificado.php?chave=7e41d1395d723fb2845fe79c9558ea99&action=view",
+  },
+  {
     id: "python-senai",
     title: "Fundamentos do Python",
     institution: "SENAI São Paulo",
