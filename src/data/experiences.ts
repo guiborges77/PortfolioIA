@@ -131,28 +131,4 @@ export const experiences: Experience[] = [
       },
     ],
   },
-  {
-    id: "sepaco",
-    company: "Hospital Sepaco",
-    logo: "https://pbs.twimg.com/profile_images/1022496448049545219/vK7N4IwR_400x400.jpg",
-    color: "from-gray-500 to-blue-500",
-    positions: [
-      {
-        role: "Aprendiz em Análise de Dados",
-        period: "Dezembro 2021 – Julho 2023",
-        location: "Presencial, São Paulo, SP",
-        status: "completed",
-        description:
-          "Análise de dados hospitalares, criação de dashboards e relatórios gerenciais para tomada de decisões estratégicas na área da saúde.",
-        activities: [
-          "Criação de dashboards interativos no Power BI.",
-          "Análise de métricas hospitalares e indicadores de saúde.",
-          "Desenvolvimento de relatórios automatizados.",
-          "Limpeza e tratamento de dados com Python.",
-          "Apresentação de insights para stakeholders.",
-        ],
-        technologies: ["Power BI", "Excel", "Python", "SQL", "Pandas", "Matplotlib"],
-      },
-    ],
-  },
 ];
