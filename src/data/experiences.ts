@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     color: "from-blue-700 to-blue-900",
     positions: [
       {
-        role: "Estagiário em Análise de Dados e Automação (Riscos Corporativos)",
+        role: "Estagiário de Análise de Dados e Automação | Riscos Corporativos",
         period: "Outubro 2025 – Presente",
         location: "Presencial, São Paulo, SP",
         status: "current",
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     color: "from-purple-500 to-purple-900",
     positions: [
       {
-        role: "Estagiário em Desenvolvimento de Sistemas",
+        role: "Estagiário de Desenvolvimento de Sistemas",
         period: "Agosto 2024 – Junho 2025",
         location: "Híbrido, São Paulo, SP",
         status: "completed",
@@ -84,7 +84,7 @@ export const experiences: Experience[] = [
     color: "from-orange-500 to-red-500",
     positions: [
       {
-        role: "Estagiário em Desenvolvimento Full Stack",
+        role: "Estagiário de Desenvolvimento Full Stack",
         period: "Janeiro 2024 – Julho 2024",
         location: "Presencial, São Paulo, SP",
         status: "completed",
