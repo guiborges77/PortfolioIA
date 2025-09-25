@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     positions: [
       {
         role: "Estagiário em Análise de Dados e Automação (Riscos Corporativos)",
-        period: "Setembro 2025 – Presente",
+        period: "Outubro 2025 – Presente",
         location: "Presencial, São Paulo, SP",
         status: "current",
         description:
