@@ -10,9 +10,9 @@ export const translations = {
     },
     hero: {
       title: 'Guilherme Borges',
-      subtitle1: 'Desenvolvedor Full Stack',
-      subtitle2: 'Analista de Dados',
-      description: 'Transformo ideias em soluções digitais inovadoras, combinando desenvolvimento web moderno com análise inteligente de dados para criar experiências excepcionais.',
+      subtitle1: 'Analista de Dados',
+      subtitle2: 'Analista de Riscos',
+      description: 'Soluções digitais inteligentes que conectam tecnologia, dados e experiência.',
       stats: {
         experience: 'Anos de Experiência',
         projects: 'Projetos Concluídos',

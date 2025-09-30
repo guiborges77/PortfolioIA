@@ -27,7 +27,7 @@ export const education: EducationItem[] = [
     period: "2024 – 2026",
     status: "Em Andamento",
     description:
-      "Aprofundamento em algoritmos, estruturas de dados, engenharia de software e inteligência artificial. Aproveitamento de disciplinas do curso de Análise e Desenvolvimento de Sistemas, restando apenas 3 semestres para a conclusão da graduação.",
+      "Aproveitamento de disciplinas do curso de Análise e Desenvolvimento de Sistemas, restando apenas 3 semestres para a conclusão da graduação. Aprofundamento em algoritmos, estruturas de dados, engenharia de software e inteligência artificial.",
     color: "from-blue-600 to-purple-600",
     progress: 60,
   },
