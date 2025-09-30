@@ -14,6 +14,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 const Education = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
+  const [showAllCourses, setShowAllCourses] = useState(false); // Estado para controlar "Ver mais"
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
@@ -99,19 +100,17 @@ const Education = () => {
                     <BookOpen className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-sm sm:text-2xl">
+                    <h3
+                      className={`font-bold text-white text-sm sm:text-lg md:text-2xl`}
+                    >
                       {t("education.tabs.education")}
                     </h3>
-                    <p className="text-xs opacity-70 mt-1">
-                      2 Graduações
-                    </p>
+                    <p className="text-xs opacity-70 mt-1">2 Graduações</p>
                   </div>
                 </div>
                 <ChevronRight
                   className={`w-4 h-4 transition-transform ${
-                    activeTab === 0
-                      ? "rotate-90"
-                      : "group-hover:translate-x-1"
+                    activeTab === 0 ? "rotate-90" : "group-hover:translate-x-1"
                   }`}
                 />
               </div>
@@ -139,16 +138,12 @@ const Education = () => {
                     <h3 className="font-bold text-white text-sm sm:text-2xl">
                       {t("education.tabs.courses")}
                     </h3>
-                    <p className="text-xs opacity-70 mt-1">
-                      16+ Certificações
-                    </p>
+                    <p className="text-xs opacity-70 mt-1">16+ Certificações</p>
                   </div>
                 </div>
                 <ChevronRight
                   className={`w-4 h-4 transition-transform ${
-                    activeTab === 1
-                      ? "rotate-90"
-                      : "group-hover:translate-x-1"
+                    activeTab === 1 ? "rotate-90" : "group-hover:translate-x-1"
                   }`}
                 />
               </div>
@@ -160,7 +155,9 @@ const Education = () => {
             <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden">
               <div
                 className={`h-1 bg-gradient-to-r ${
-                  activeTab === 0 ? "from-green-400 to-blue-500" : "from-yellow-400 to-orange-500"
+                  activeTab === 0
+                    ? "from-green-400 to-blue-500"
+                    : "from-yellow-400 to-orange-500"
                 }`}
               ></div>
               <div className="p-8">
@@ -241,94 +238,133 @@ const Education = () => {
                       </h3>
                     </div>
 
-                    {/* Scroll + setas mobile */}
-                    <div className="relative">
-                      {/* Botão anterior - mobile */}
-                      <button
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-gray-800/50 text-white rounded-full sm:hidden"
-                        onClick={() => scrollMobile("left")}
-                      >
-                        ‹
-                      </button>
-
-                      {/* Container de cursos */}
-                      <div
-                        ref={scrollRef}
-                        className="overflow-x-auto flex gap-4 pb-4 scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-gray-700/50"
-                        style={{ WebkitOverflowScrolling: "touch" }}
-                        onMouseDown={handleMouseDown}
-                        onMouseLeave={handleMouseLeave}
-                        onMouseUp={handleMouseUp}
-                        onMouseMove={handleMouseMove}
-                        onTouchStart={handleTouchStart}
-                        onTouchEnd={handleTouchEnd}
-                        onTouchMove={handleTouchMove}
-                      >
-                        {courses.map((course, idx) => (
+                    {/* Mobile: Lista vertical */}
+                    <div className="block sm:hidden">
+                      {courses
+                        .slice(0, showAllCourses ? courses.length : 3)
+                        .map((course, idx) => (
                           <div
                             key={idx}
-                            className="flex-shrink-0 w-48 lg:w-48 sm:w-40 scroll-snap-start group relative bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden"
+                            className="mb-4 p-4 bg-gray-800/30 rounded-lg border border-gray-700/50"
                           >
-                            <div
-                              className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                            ></div>
-                            <div className="p-4 relative z-10">
-                              <div className="flex items-start justify-between mb-2">
-                                <div className="flex-1">
-                                  <h4 className="font-bold text-white mb-1 text-sm lg:text-lg sm:text-xs">
-                                    {course.title}
-                                  </h4>
-                                  <p
-                                    className={`font-medium mb-1 text-xs sm:text-[10px] bg-gradient-to-r ${course.color} bg-clip-text text-transparent`}
-                                  >
-                                    {course.institution}
-                                  </p>
-                                  <span className="inline-flex items-center px-2 py-0.5 bg-gray-800/50 text-gray-300 text-[10px] rounded-full border border-gray-700/50">
-                                    <Award className="w-3 h-3 mr-1" />
-                                    {course.type}
-                                  </span>
-                                </div>
-                                <a
-                                  href={
-                                    course.link !== "#"
-                                      ? course.link
-                                      : undefined
-                                  }
-                                  target={
-                                    course.link !== "#" ? "_blank" : undefined
-                                  }
-                                  rel="noopener noreferrer"
-                                  className={`text-cyan-400 hover:text-cyan-300 transition-colors group-hover:scale-110 transform duration-300 ${
-                                    course.link === "#"
-                                      ? "cursor-not-allowed opacity-50"
-                                      : ""
-                                  }`}
-                                >
-                                  <ExternalLink className="w-5 h-5" />
-                                </a>
-                              </div>
-                              <div className="flex flex-wrap gap-1">
-                                {course.skills.map((skill, id) => (
-                                  <span
-                                    key={id}
-                                    className="px-2 py-0.5 bg-gray-800/50 text-gray-300 text-[10px] rounded-full font-medium border border-gray-700/50 hover:border-cyan-500/50 hover:text-cyan-400 transition-all"
-                                  >
-                                    {skill}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
+                            <h4 className="text-lg font-bold text-white">
+                              {course.title}
+                            </h4>
+                            <p className="text-sm text-gray-400">
+                              {course.institution}
+                            </p>
+                            <a
+                              href={course.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-cyan-400 hover:text-cyan-300 text-sm"
+                            >
+                              Ver certificado
+                            </a>
                           </div>
                         ))}
-                      </div>
+                      {!showAllCourses && (
+                        <button
+                          onClick={() => setShowAllCourses(true)}
+                          className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg"
+                        >
+                          Ver mais
+                        </button>
+                      )}
+                    </div>
 
-                      {/* Botão próximo - mobile */}
-                      <button
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-gray-800/50 text-white rounded-full sm:hidden"
-                        onClick={() => scrollMobile("right")}
-                      >
-                        ›
-                      </button>
+                    {/* Desktop: Comportamento atual */}
+                    <div className="hidden sm:block">
+                      {/* Mantém o comportamento atual */}
+                      {/* Scroll + setas mobile */}
+                      <div className="relative">
+                        {/* Botão anterior - mobile */}
+                        <button
+                          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-gray-800/50 text-white rounded-full sm:hidden"
+                          onClick={() => scrollMobile("left")}
+                        >
+                          ‹
+                        </button>
+
+                        {/* Container de cursos */}
+                        <div
+                          ref={scrollRef}
+                          className="overflow-x-auto flex gap-4 pb-4 scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-gray-700/50"
+                          style={{ WebkitOverflowScrolling: "touch" }}
+                          onMouseDown={handleMouseDown}
+                          onMouseLeave={handleMouseLeave}
+                          onMouseUp={handleMouseUp}
+                          onMouseMove={handleMouseMove}
+                          onTouchStart={handleTouchStart}
+                          onTouchEnd={handleTouchEnd}
+                          onTouchMove={handleTouchMove}
+                        >
+                          {courses.map((course, idx) => (
+                            <div
+                              key={idx}
+                              className="flex-shrink-0 w-48 lg:w-48 sm:w-40 scroll-snap-start group relative bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 overflow-hidden"
+                            >
+                              <div
+                                className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                              ></div>
+                              <div className="p-4 relative z-10">
+                                <div className="flex items-start justify-between mb-2">
+                                  <div className="flex-1">
+                                    <h4 className="font-bold text-white mb-1 text-sm lg:text-lg sm:text-xs">
+                                      {course.title}
+                                    </h4>
+                                    <p
+                                      className={`font-medium mb-1 text-xs sm:text-[10px] bg-gradient-to-r ${course.color} bg-clip-text text-transparent`}
+                                    >
+                                      {course.institution}
+                                    </p>
+                                    <span className="inline-flex items-center px-2 py-0.5 bg-gray-800/50 text-gray-300 text-[10px] rounded-full border border-gray-700/50">
+                                      <Award className="w-3 h-3 mr-1" />
+                                      {course.type}
+                                    </span>
+                                  </div>
+                                  <a
+                                    href={
+                                      course.link !== "#"
+                                        ? course.link
+                                        : undefined
+                                    }
+                                    target={
+                                      course.link !== "#" ? "_blank" : undefined
+                                    }
+                                    rel="noopener noreferrer"
+                                    className={`text-cyan-400 hover:text-cyan-300 transition-colors group-hover:scale-110 transform duration-300 ${
+                                      course.link === "#"
+                                        ? "cursor-not-allowed opacity-50"
+                                        : ""
+                                    }`}
+                                  >
+                                    <ExternalLink className="w-5 h-5" />
+                                  </a>
+                                </div>
+                                <div className="flex flex-wrap gap-1">
+                                  {course.skills.map((skill, id) => (
+                                    <span
+                                      key={id}
+                                      className="px-2 py-0.5 bg-gray-800/50 text-gray-300 text-[10px] rounded-full font-medium border border-gray-700/50 hover:border-cyan-500/50 hover:text-cyan-400 transition-all"
+                                    >
+                                      {skill}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Botão próximo - mobile */}
+                        <button
+                          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 bg-gray-800/50 text-white rounded-full sm:hidden"
+                          onClick={() => scrollMobile("right")}
+                        >
+                          ›
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
