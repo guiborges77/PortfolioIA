@@ -19,7 +19,7 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: "b3",
-    company: "B3",
+    company: "B3 - Brasil, Bolsa, Balcão",
     logo: "https://yt3.googleusercontent.com/3k4_BeTxXa84BidlTyXjtFq4iw4cjH6bL7CHQ4tFfQLlz825fx_fqouLk86VerBDMEjUhN12IA=s900-c-k-c0x00ffffff-no-rj",
     color: "from-blue-700 to-blue-900",
     positions: [
