@@ -10,8 +10,8 @@ export const translations = {
     },
     hero: {
       title: 'Guilherme Borges',
-      subtitle1: 'Analista de Dados',
-      subtitle2: 'Analista de Riscos',
+      subtitle1: 'Análise de Dados',
+      subtitle2: 'Automação',
       description: 'Soluções digitais inteligentes que conectam tecnologia, dados e experiência.',
       stats: {
         experience: 'Anos de Experiência',

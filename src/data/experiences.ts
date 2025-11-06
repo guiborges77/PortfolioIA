@@ -18,6 +18,39 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "b3",
+    company: "B3",
+    logo: "https://yt3.googleusercontent.com/3k4_BeTxXa84BidlTyXjtFq4iw4cjH6bL7CHQ4tFfQLlz825fx_fqouLk86VerBDMEjUhN12IA=s900-c-k-c0x00ffffff-no-rj",
+    color: "from-blue-700 to-blue-900",
+    positions: [
+      {
+        role: "Estagiário de Dados e Automação | Riscos de Crédito",
+        period: "Dezembro 2025 – Presente",
+        location: "Híbrido, São Paulo, SP",
+        status: "current",
+        description:
+          "Atuação na área de Risco de Crédito da B3, desenvolvendo e mantendo rotinas automatizadas em Python e R voltadas ao monitoramento de risco de crédito de bancos, corretoras e demais participantes do mercado. As atividades envolvem o tratamento, integração e análise de dados financeiros e cadastrais provenientes de múltiplas fontes (bancos de dados internos, planilhas e APIs), garantindo a qualidade, consistência e rastreabilidade das informações utilizadas nas métricas de risco.",
+
+        activities: [
+          "Desenvolvimento e manutenção de rotinas em Python e R para automação de processos de monitoramento de risco de crédito.",
+          "Criação e otimização de pipelines de ETL para extração, transformação e consolidação de dados financeiros e cadastrais.",
+          "Migração e refatoração de rotinas legadas (em R e VBA) para Python, com foco em performance e padronização de outputs.",
+          "Automação de relatórios e análises de exposição de risco, reduzindo tarefas manuais e aprimorando a eficiência operacional.",
+          "Desenvolvimento de dashboards interativos com Streamlit para visualização de indicadores e análise dinâmica de dados de risco.",
+          "Análise de indicadores de exposição, solvência e concentração por grupo econômico, apoiando estratégias de mitigação de risco.",
+          "Manutenção e atualização de grupos econômicos de investidores, validando vínculos societários e estrutura de conglomerados.",
+          "Apoio à área de Prevenção à Lavagem de Dinheiro (PLD) por meio de automação de consultas, cruzamentos e filtros para identificação de movimentações atípicas.",
+          "Integração de dados de múltiplas fontes (bancos de dados internos, planilhas e APIs) para construção de bases consolidadas e confiáveis.",
+          "Utilização de SQL para consultas e manipulação de grandes volumes de dados em ambientes corporativos.",
+        ],
+
+        technologies: [
+          "Python", "R", "SQL", "Streamlit", "Excel", "Power BI", "VBA",
+        ],
+      },
+    ],
+  },
+  {
     id: "safra",
     company: "Banco Safra",
     logo: "https://yt3.googleusercontent.com/W8_SDQithmLmmyYwyNbGGspDouytK3fT4pJczQWL9cGdGFySK-2-Jj07K_3jF4Ap2LuMLkEBT5E=s900-c-k-c0x00ffffff-no-rj",
@@ -25,18 +58,21 @@ export const experiences: Experience[] = [
     positions: [
       {
         role: "Estagiário de Análise de Dados e Automação | Riscos Corporativos",
-        period: "Outubro 2025 – Presente",
+        period: "Outubro 2025 – Dezembro 2025",
         location: "Presencial, São Paulo, SP",
-        status: "current",
+        status: "completed",
         description:
-          "Atuação na área de Riscos Corporativos da Corretora do Banco Safra, apoiando na análise e gerenciamento de riscos, elaboração de relatórios regulatórios e automação de processos por meio de Python, Excel/VBA e Access.",
+          "Atuação na área de Riscos Corporativos da Corretora do Banco Safra, aplicando conhecimentos técnicos para fortalecer o gerenciamento de riscos e otimizar processos operacionais por meio de automações e análise de dados. Foco em eficiência, governança e conformidade regulatória, utilizando Python, VBA, Power Automate e ferramentas de análise de dados.",
+
         activities: [
-          "Coleta, tratamento e análise de dados de risco de mercado, crédito e operacional da corretora.",
-          "Elaboração de relatórios gerenciais e regulatórios, garantindo conformidade com órgãos como Bacen e CVM.",
-          "Automação de processos e fluxos de dados utilizando Python e macros em VBA.",
-          "Uso de Microsoft Access para consultas e organização de bases de dados relacionadas a risco.",
-          "Criação de análises estatísticas simples para apoiar métricas de risco e tomada de decisão.",
-          "Apoio à governança e acompanhamento de limites operacionais, contribuindo para a mitigação de riscos.",
+          "Criação de automações em Python, VBA e Power Automate, eliminando tarefas repetitivas e reduzindo significativamente o tempo de execução das rotinas operacionais.",
+          "Desenvolvimento de dashboards interativos com Streamlit, incluindo um aplicativo interno que permite upload de planilhas e geração de visualizações dinâmicas de risco.",
+          "Automatização de relatórios regulatórios e gerenciais, garantindo conformidade com Bacen e CVM e otimizando a geração de informações críticas.",
+          "Coleta, tratamento e análise de dados relacionados a risco de mercado, crédito e operacional utilizando Python, Excel e Microsoft Access.",
+          "Responsável pela liberação de operações da corretora, assegurando o cumprimento dos limites operacionais definidos pela área de risco.",
+          "Criação de análises estatísticas simples para apoiar métricas de risco e embasar a tomada de decisão de gestores.",
+          "Contribuição na governança de limites operacionais, aprimorando a mitigação de riscos e a eficiência das rotinas internas.",
+          "Aprimoramento contínuo de processos e controles internos, promovendo maior confiabilidade e agilidade nas entregas da área.",
         ],
         technologies: ["Excel", "VBA", "Python", "Access", "SQL", "Power BI"],
       },
@@ -127,7 +163,13 @@ export const experiences: Experience[] = [
           "Suporte em sistemas internos e ferramentas corporativas.",
           "Gestão de chamados via HelpDesk, garantindo cumprimento de SLAs.",
         ],
-        technologies: ["Windows", "Linux", "Redes", "HelpDesk", "Pacote Office"],
+        technologies: [
+          "Windows",
+          "Linux",
+          "Redes",
+          "HelpDesk",
+          "Pacote Office",
+        ],
       },
     ],
   },
